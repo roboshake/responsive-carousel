@@ -28,7 +28,9 @@
 						if( thumb ){
 							content = "<img src='" + thumb + "' alt=''>";
 						}
-						pNav.append( "<li><a href='#" + num + "' title='Go to slide " + num + "'>" + content + "</a>" );
+						pNav.append($("<div />")
+                                				.append($("<a href='#" + num + "' title='Go to slide " + num + "'/>")
+                                            				.html(content)));
 				});
 
 				if( thumb ){
